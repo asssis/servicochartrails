@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_05_15_013246) do
 
   create_table "products", force: :cascade do |t|
     t.string "descricao", limit: 50
-    t.decimal "valor"
+    t.string "valor"
     t.string "codigo", limit: 50
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2020_05_15_013246) do
   create_table "sales", force: :cascade do |t|
     t.datetime "date"
     t.integer "quantidade"
-    t.decimal "total"
+    t.string "total"
     t.integer "product_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

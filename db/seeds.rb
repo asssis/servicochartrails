@@ -18,7 +18,7 @@ p = Product.all
 while data < DateTime.now
   index = rand(1...p.length)
   quantidade = rand(1..5)
-  Sale.create(product_id: p[index].id,date: data, quantidade: quantidade , total: quantidade * p[index].valor)
-  data +=1
+  Sale.create(product_id: p[index].id,date: data, quantidade: quantidade , total: quantidade * p[index].valor.to_f)
+  data += 1
 end
 puts '-fim-'

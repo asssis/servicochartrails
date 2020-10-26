@@ -57,7 +57,7 @@ class SalesJob < ActiveJob::Base
         
         next if(r.blank?)
         r.each do |valores|
-          value += valores.total
+          value += valores.total.to_f
           projection = false
         end
     
@@ -87,7 +87,7 @@ class SalesJob < ActiveJob::Base
         
         next if(r.blank?)
         r.each do |valores|
-          value += valores.total
+          value += valores.total.to_f
           projection = false
         end
     
@@ -115,7 +115,7 @@ class SalesJob < ActiveJob::Base
         projection = true
         r.each do |valores|
           projection = false
-          value += valores.total
+          value += valores.total.to_f
         end
 
      
@@ -144,7 +144,7 @@ class SalesJob < ActiveJob::Base
           
           next if(r.blank?)
           r.each do |valores|
-            value += valores.total
+            value += valores.total.to_f
             projection = false
           end
     
@@ -174,7 +174,7 @@ class SalesJob < ActiveJob::Base
           
           next if(r.blank?)
           r.each do |valores|
-            value += valores.total
+            value += valores.total.to_f
             projection = false
           end
       
@@ -205,7 +205,7 @@ class SalesJob < ActiveJob::Base
           
           next if(r.blank?)
           r.each do |valores|
-            value += valores.total
+            value += valores.total.to_f
             projection = false
           end
     
